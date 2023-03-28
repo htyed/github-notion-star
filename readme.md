@@ -1,13 +1,7 @@
-# github-notion-star
-
-使用 Notion 和 Github Actions 同步和管理你的 Github Star.
-
-## Breaking Change
-
-从 [#4](https://github.com/lcjnil/github-notion-star/issues/4) 版本开始，增加了 `Primary Language` 和 `Repository Topics` 两个参数（by @imfycc），需要在原有 database 中增加这两个选项，否则同步会失败。
+# README
+首先感谢大佬[lcjnil](https://github.com/lcjnil)的付出，然后在这里记录一下自己的实践过程。
 
 ## 功能
-
 - （可选）支持全量同步所有的 star 到 notion
 - （可选）支持使用 Github Actions 定时同步增量的 star 到 notion
 
@@ -19,6 +13,8 @@
     - `NOTION_API_KEY` 申请的 Notion API 的 Key，注意，你的模板需要被共享给这个 API
     - `NOTION_DATABASE_ID` 对应的 Notion Database ID
     - `TOKEN_OF_GITHUB` Github 的用户 token，用于获取当前用户的 API
+- 在Notion 数据库中添加连接！！！
+
 
 除此之外，还可以修改环境变量的形式修改当前的配置，例如：
 
@@ -39,7 +35,7 @@
 <details><summary>如何申请 Github API TOKEN</summary>
 请参考：https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token.
 
-这里不需要勾选任何权限。
+生成经典令牌即可 & 这里不需要勾选任何权限
 </details>
 
 ## 开始同步
